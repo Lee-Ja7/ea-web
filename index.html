@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>重科小助手 ExpressAssistant — 让校园生活，更简单一点</title>
+  <meta name="description" content="重科小助手（ExpressAssistant），为校园生活打造的一站式智能工具箱。集课程管理、取件码识别、校园地图、实用工具等功能于一体。" />
+  <meta name="theme-color" content="#080D18" />
+  <meta property="og:title" content="重科小助手 ExpressAssistant" />
+  <meta property="og:description" content="为校园生活打造的一站式智能工具箱。" />
+  <meta property="og:type" content="website" />
+  <!-- TODO: 部署后补充 og:url / og:image / canonical（ea.qingfengstudio.cn） -->
+  <link rel="icon" href="public/images/logo/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ======================= 背景装饰层 ======================= -->
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+    <div class="bg-glow bg-glow--3"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-watermark"></div>
+  </div>
+
+  <!-- ======================= 01 导航栏 ======================= -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="logo-badge brand__logo"><img src="public/images/logo/logo.png" alt="重科小助手 Logo" width="36" height="36" /></span>
+        <span class="brand__text">
+          <strong>重科小助手</strong>
+          <small>ExpressAssistant</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link is-active">首页</a></li>
+        <li><a href="#about" class="nav-link">产品介绍</a></li>
+        <li><a href="#features" class="nav-link">功能特色</a></li>
+        <li><a href="#preview" class="nav-link">界面展示</a></li>
+        <li><a href="#download" class="nav-link">下载中心</a></li>
+        <li><a href="#changelog" class="nav-link">更新日志</a></li>
+        <li><a href="#announcements" class="nav-link">公告</a></li>
+        <li><a href="#about-project" class="nav-link">关于项目</a></li>
+        <li class="nav-menu__cta">
+          <a href="#download" class="btn btn--primary btn--sm">立即下载</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= 02 首屏 Hero ======================= -->
+    <section class="hero section" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__badge">Qingfeng Studio 出品 · Android 应用</p>
+          <h1 class="hero__title">让校园生活，<br /><span class="text-gradient">更简单一点。</span></h1>
+          <p class="hero__subtitle">重科小助手，为校园生活打造的一站式智能工具箱。</p>
+          <p class="hero__desc">集课程管理、取件码识别、校园地图、实用工具等功能于一体，让日常校园生活更加便捷。</p>
+          <div class="hero__actions">
+            <a href="#download" class="btn btn--primary">立即下载</a>
+            <a href="#features" class="btn btn--ghost">探索功能</a>
+          </div>
+          <ul class="hero__meta" aria-label="应用信息">
+            <li><span class="meta-ico" data-icon="smartphone"></span> Android 应用</li>
+            <li><span class="meta-ico" data-icon="package"></span> 当前版本：<span class="js-app-version">待发布</span></li>
+            <li><span class="meta-ico" data-icon="smartphone"></span> 适用平台：Android</li>
+          </ul>
+        </div>
+
+        <!-- 手机展示区：截图占位，后续替换真实截图 -->
+        <div class="hero__phones reveal" aria-hidden="false">
+          <div class="phone-stack">
+            <div class="phone phone--back phone--left">
+              <div class="phone__screen">
+                <img src="public/images/screenshots/ocr.jpg" alt="OCR 助手界面截图" loading="lazy" />
+              </div>
+            </div>
+            <div class="phone phone--back phone--right">
+              <div class="phone__screen">
+                <img src="public/images/screenshots/theme.jpg" alt="界面风格设置截图" loading="lazy" />
+              </div>
+            </div>
+            <div class="phone phone--main">
+              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__screen">
+                <img src="public/images/screenshots/home.jpg" alt="重科小助手首页截图" />
+              </div>
+            </div>
+          </div>
+          <div class="float-tag float-tag--1"><span class="tag-ico" data-icon="book"></span>课程管理</div>
+          <div class="float-tag float-tag--2"><span class="tag-ico" data-icon="package"></span>取件码识别</div>
+          <div class="float-tag float-tag--3"><span class="tag-ico" data-icon="map-pin"></span>校园地图</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 03 产品介绍 ======================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">About Product · 产品介绍</p>
+          <h2 class="section__title">不止是工具，更是<span class="text-gradient">校园生活助手</span>。</h2>
+          <p class="section__desc">
+            重科小助手是一款面向校园生活场景打造的 Android 应用，整合日常高频使用功能，
+            帮助学生更方便地处理校园生活中的常见事务。
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-grid__media reveal">
+            <img class="about-shot" src="public/images/screenshots/decision.jpg" alt="重科摇摇乐界面截图" loading="lazy" />
+          </div>
+          <div class="about-grid__cards">
+            <article class="card card--intro reveal">
+              <span class="card__ico" data-icon="zap"></span>
+              <h3>高效便捷</h3>
+              <p>整合常用校园功能，一个应用覆盖日常高频场景，减少来回切换。</p>
+            </article>
+            <article class="card card--intro reveal">
+              <span class="card__ico" data-icon="sparkles"></span>
+              <h3>简洁易用</h3>
+              <p>统一交互与视觉体验，界面清爽直观，上手零成本。</p>
+            </article>
+            <article class="card card--intro reveal">
+              <span class="card__ico" data-icon="refresh"></span>
+              <h3>持续更新</h3>
+              <p>持续迭代功能与体验，认真对待每一条用户反馈。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 04 核心功能 ======================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Features · 功能特色</p>
+          <h2 class="section__title">核心功能，<span class="text-gradient">一应俱全</span>。</h2>
+          <p class="section__desc">八大功能模块，覆盖校园生活的主要场景。</p>
+        </header>
+        <div class="feature-grid" id="featureGrid"><!-- 由 js/data.js 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 05 App 界面展示 ======================= -->
+    <section class="section" id="preview">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">App Preview · 界面展示</p>
+          <h2 class="section__title">简洁设计，<span class="text-gradient">流畅体验</span>。</h2>
+          <p class="section__desc">来自真实应用的界面截图。</p>
+        </header>
+        <div class="shots-scroller reveal" role="region" aria-label="应用界面截图轮播" id="shotsScroller">
+          <div class="shots-track" id="shotsTrack"><!-- 由 js/data.js 渲染 --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 06 下载中心 ======================= -->
+    <section class="section" id="download">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Download · 下载中心</p>
+          <h2 class="section__title">开启你的<span class="text-gradient">校园便捷生活</span>。</h2>
+        </header>
+
+        <div class="download-card reveal">
+          <div class="download-card__info">
+            <span class="logo-badge download-card__logo"><img src="public/images/logo/logo.png" alt="重科小助手 Logo" width="88" height="88" /></span>
+            <div>
+              <h3>重科小助手 <small>ExpressAssistant</small></h3>
+              <dl class="dl-meta" id="dlMeta">
+                <!-- 由 js/data.js 渲染版本信息 -->
+              </dl>
+            </div>
+          </div>
+          <div class="download-card__actions">
+            <a class="btn btn--primary btn--lg js-download-apk" href="#" data-download-key="latest"><span class="btn-ico" data-icon="download"></span>下载 Android APK</a>
+            <a class="btn btn--ghost" href="https://gitee.com/qingfeng_studio/ExpressAssistant_ii/releases" target="_blank" rel="noopener">Gitee 镜像下载</a>
+            <a class="btn btn--ghost" href="#changelog">查看更新日志</a>
+            <p class="download-card__note" id="downloadNote">APK 下载地址尚未配置，发布后此处可用。</p>
+          </div>
+        </div>
+
+        <!-- 历史版本（预留，数据来自 js/data.js） -->
+        <div class="versions reveal" id="versionList"><!-- 由 js/data.js 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 07 更新日志 ======================= -->
+    <section class="section" id="changelog">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Changelog · 更新日志</p>
+          <h2 class="section__title">持续迭代，<span class="text-gradient">不断完善</span>。</h2>
+        </header>
+        <div class="timeline" id="changelogList"><!-- 由 js/data.js 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 08 公告中心 ======================= -->
+    <section class="section" id="announcements">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">Announcements · 公告中心</p>
+          <h2 class="section__title">项目公告与<span class="text-gradient">重要通知</span>。</h2>
+        </header>
+        <div class="ann-list" id="announcementList"><!-- 由 js/data.js 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 09 关于项目 ======================= -->
+    <section class="section" id="about-project">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__kicker">About · 关于项目</p>
+          <h2 class="section__title">关于<span class="text-gradient">重科小助手</span>。</h2>
+        </header>
+
+        <div class="about-project-grid">
+          <div class="card card--project reveal">
+            <h3>项目信息</h3>
+            <dl class="kv">
+              <div><dt>项目名称</dt><dd>重科小助手</dd></div>
+              <div><dt>英文名称</dt><dd>ExpressAssistant</dd></div>
+              <div><dt>项目归属</dt><dd>Qingfeng Studio</dd></div>
+              <div><dt>项目定位</dt><dd>校园生活辅助工具</dd></div>
+              <div><dt>运行平台</dt><dd>Android</dd></div>
+              <div><dt>官方网站</dt><dd>ea.qingfengstudio.cn</dd></div>
+            </dl>
+          </div>
+
+          <div class="card card--project reveal">
+            <h3>开发者</h3>
+            <div class="ph ph--wide" data-ph-name="开发者介绍" data-ph-ratio="4/3">开发者介绍占位</div>
+          </div>
+
+          <div class="card card--project reveal">
+            <h3>链接与反馈</h3>
+            <ul class="link-list" id="linkList"><!-- 由 js/data.js 渲染 --></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= 10 页脚 ======================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="logo-badge"><img src="public/images/logo/logo.png" alt="Qingfeng Studio Logo" width="40" height="40" /></span>
+        <p><strong>Qingfeng Studio</strong><br /><span>ExpressAssistant · 重科小助手</span></p>
+      </div>
+      <nav class="footer__nav" aria-label="页脚导航">
+        <a href="#home">首页</a>
+        <a href="#download">下载中心</a>
+        <a href="#changelog">更新日志</a>
+        <a href="#announcements">公告</a>
+        <a href="https://github.com/Lee-Ja7/ExpressAssistant_ii" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:lyqingfeng@163.com">联系我们</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>Copyright © 2026 Qingfeng Studio. All rights reserved.</p>
+      <p class="footer__icp ph ph--chip" data-ph-name="ICP 备案号">ICP 备案信息预留</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
